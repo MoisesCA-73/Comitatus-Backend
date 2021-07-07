@@ -6,7 +6,7 @@ class CursoDelEstudianteModel:
 
     def get_curso_del_estudiante(self, cui):    
         params = {'cui' : cui}      
-        rv = self.mysql_pool.execute("SELECT * from task where cui=%(cui)s", params)
+        rv = self.mysql_pool.execute("SELECT * from curso del estudiante where cui=%(cui)s", params)
         data = []
         content = {}
         for result in rv:
