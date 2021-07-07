@@ -10,7 +10,7 @@ class CursoDelEstudianteModel:
         data = []
         content = {}
         for result in rv:
-            content = {'cui': result[0], 'curso1': result[1], 'curso2': result[2], 'curso1': result[3], 'curso2': result[4], 'curso5': result[5]}
+            content = {'cui': result[0], 'curso1': result[1], 'curso2': result[2], 'curso3': result[3], 'curso4': result[4], 'curso5': result[5]}
             data.append(content)
             content = {}
         return data
@@ -20,7 +20,7 @@ class CursoDelEstudianteModel:
         data = []
         content = {}
         for result in rv:
-            content = {'cui': result[0], 'curso1': result[1], 'curso2': result[2], 'curso1': result[3], 'curso2': result[4], 'curso5': result[5]}
+            content = {'cui': result[0], 'curso1': result[1], 'curso2': result[2], 'curso3': result[3], 'curso4': result[4], 'curso5': result[5]}
             data.append(content)
             content = {}
         return data
