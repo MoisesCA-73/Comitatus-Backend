@@ -41,7 +41,7 @@ class EscuelaModel:
 
     def delete_escuela(self, idEscuela):
         params = {'idEscuela': idEscuela}
-        query = """delete from escuela where id Escuela = %(idEscuela)s"""    
+        query = """delete from escuela where idEscuela = %(idEscuela)s"""    
         self.mysql_pool.execute(query, params, commit=True)  
         data = {'result': 1}
         return data
