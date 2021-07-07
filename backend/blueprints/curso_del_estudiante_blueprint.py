@@ -21,7 +21,7 @@ def create_curso_del_estudiante():
 @curso_del_estudiante_blueprint.route('/curso_del_estudiante/delete_curso_del_estudiante', methods=['POST'])
 @cross_origin()
 def delete_curso_del_estudiante():
-    return jsonify(model.delete_cursos_del_estudiante(int(request.json['cui'])))
+    return jsonify(model.delete_curso_del_estudiante(int(request.json['cui'])))
 
 @curso_del_estudiante_blueprint.route('/curso_del_estudiante/get_curso_del_estudiante', methods=['POST'])
 @cross_origin()
