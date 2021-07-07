@@ -15,7 +15,7 @@ class EscuelaModel:
             content = {}
         return data
 
-    def get_all_escuela(self):
+    def get_all_escuela(self):#Obtener todos los datos 
         rv = self.mysql_pool.execute("SELECT * from escuela")  
         data = []
         content = {}
@@ -25,7 +25,7 @@ class EscuelaModel:
             content = {}
         return data
 
-    def create_escuela(self, idEscuela, escuela, anio, numero_estudiantes):
+    def create_escuela(self, idEscuela, escuela, anio, numero_estudiantes):#Se envian los parametros a traves del formato JSON 
         params = {
             'idEscuela' : idEscuela,
             'escuela' : escuela,
@@ -39,7 +39,7 @@ class EscuelaModel:
         data = {'idEscuela': cursor.lastrowid, 'escuela': escuela, 'anio': anio, 'numero_estudiantes': numero_estudiantes}
         return data
 
-    def delete_escuela(self, idEscuela):
+    def delete_escuela(self, idEscuela):#Se envia el IdEscuela con la que se identifica para eliminar no se necesita mas
         params = {'idEscuela': idEscuela}
         query = """delete from escuela where idEscuela = %(idEscuela)s"""    
         self.mysql_pool.execute(query, params, commit=True)  
